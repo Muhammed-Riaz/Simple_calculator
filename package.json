@@ -1,6 +1,6 @@
 {
-  "name": "simple_calculator",
-  "version": "1.0.0",
+  "name": "riaz110_simple_calculator",
+  "version": "1.0.3",
   "description": "\"A simple calculator with  typescript , Nodejs and inquirer\"",
   "main": "index.js",
   "type": "module",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "\"Riaz\"",
+  "author": "Riaz",
   "license": "MIT",
   "dependencies": {
     "firequiz": "^0.0.5",

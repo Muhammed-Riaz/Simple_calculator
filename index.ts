@@ -1,22 +1,44 @@
+#! usr/bin/env node
+
 import inquirer from "inquirer";
 
-const answer = await inquirer.prompt([{
-    message:"Enter a Number",type:"number",name:"Number"},
-    {message: "Enter a 2nd Number",type:"number",name:"SecondNumber"},
-    {message:"Select operator ",
-     type:"list",
-     name:"operator",
-     choices:["Addition" , "Substraction", "Multiplication","Division" ,"Percentage"]
+const answer = await inquirer.prompt(
+
+  [
+   
+    { 
+    message:"enter a Number",
+    type:"number",
+    name:"firstnumber",
     },
-]);
-if(answer.operator === "Addition"){
-    console.log("your answer is " , answer.Number + answer.SecondNumber );
-}else if(answer.operator === "Substraction"){
-    console.log("your answer is " , answer.Number - answer.SecondNumber );
-}else if(answer.operator === "Multiplication"){
-    console.log("your answer is " , answer.Number * answer.SecondNumber );
-}else if(answer.operator === "Division"){
-    console.log("your answer is " , answer.Number / answer.SecondNumber );
-}else {
-    console.log("invalid")
-}
+
+    {
+        message: "enter a 2nd Number",
+        type:"number",
+        name:"secondNumber",
+    },
+
+    {
+        message:"select operator ",
+        type:"list",
+        name:"operator",
+        choices:["addition" , "substraction", "multiplication","division","module"],
+    },
+
+  ]
+    
+      );
+
+if(answer.operator === "addition"){
+    console.log("your answer is " , answer.firstnumber + answer.secondNumber );
+}else if(answer.operator === "substraction"){
+    console.log("your answer is " , answer.firstnumber - answer.secondNumber );
+}else if(answer.operator === "multiplication"){
+    console.log("your answer is " , answer.firstnumber * answer.secondNumber );
+}else if(answer.operator === "division"){
+    console.log("your answer is " , answer.firstnumber / answer.secondNumber );
+}else if(answer.operator === "module"){
+    console.log("your answer is " , answer.firstnumber % answer.secondNumber );
+} else{
+    console.log("invalid");
+};
